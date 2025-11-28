@@ -1,6 +1,24 @@
 ﻿namespace Functions
 {
-    internal class Program{
+    internal class Program
+    {
+        string[] vragen = new string[]
+        {
+            "What is one of the great values that guides your life?",
+            "What's something you wish you'd figured out sooner?",
+            "What was your best birthday?",
+            "Who was your favorite teacher and why?",
+            "What's the story behind one of your scars?"
+        };
+
+        internal string GetRandomVraag()
+        {
+            int random = (Math.(0, 1, 2, 3, 4));
+        }
+        internal string GetVraag(int vraagIndex)
+        {
+            return vragen[vraagIndex];
+        }
         static void Main(string[] args)
         {
             Program program = new Program(); // er wordt een nieuwe variabele gemaakt: 'program'. dit variabel wordt gebruikt om 'Run' op een specifieke manier uit te voeren
@@ -15,6 +33,8 @@
             Vraag4();
             Vraag5();
             Vraag6();
+            Vraag7();
+            string vraag0 = GetVraag(0);
         }
 
         internal void Vraag1()
@@ -63,6 +83,14 @@
             string antwoord = Console.ReadLine();
 
             Console.WriteLine(antwoord);
+        }
+
+        internal string Vraag7()
+        {
+            Console.WriteLine("Favorite city?");
+            string antwoord = Console.ReadLine();
+
+            return antwoord;
         }
     }
 }
